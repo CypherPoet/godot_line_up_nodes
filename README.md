@@ -1,3 +1,5 @@
+<img src="logo.svg" width="128" height="128">
+
 # Line Up Nodes - Godot Editor Plugin
 
 A Godot 4.5 editor plugin that provides a convenient dock panel for aligning selected nodes into straight lines at fixed distances.
