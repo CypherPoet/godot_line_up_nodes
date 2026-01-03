@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbf04bej7hr4r"]
+
+[ext_resource type="Texture2D" uid="uid://dn2783q1j2j1x" path="res://assets/icons/godot_icon.svg" id="1_khjii"]
+
+[node name="Horizontal Demo 2D" type="Node2D"]
+
+[node name="Sprite2D 01" type="Sprite2D" parent="."]
+modulate = Color(1, 0.4666667, 0, 1)
+position = Vector2(143, 347)
+texture = ExtResource("1_khjii")
+
+[node name="Sprite2D 02" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0.7166667, 1)
+position = Vector2(263, 303)
+texture = ExtResource("1_khjii")
+
+[node name="Sprite2D 03" type="Sprite2D" parent="."]
+position = Vector2(383, 259)
+texture = ExtResource("1_khjii")
+
+[node name="Sprite2D 04" type="Sprite2D" parent="."]
+modulate = Color(9.62615e-08, 0.59684044, 0.36086652, 1)
+position = Vector2(503, 215)
+texture = ExtResource("1_khjii")
+
+[node name="Sprite2D 05" type="Sprite2D" parent="."]
+modulate = Color(0.00999999, 1, 1, 1)
+position = Vector2(623, 171)
+texture = ExtResource("1_khjii")
