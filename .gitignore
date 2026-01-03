@@ -20,3 +20,8 @@ mono_crash.*.json
 
 # Build artifacts
 exports/built_games
+
+
+# Addons that aren't ours
+/addons/*
+!/addons/line_up_nodes

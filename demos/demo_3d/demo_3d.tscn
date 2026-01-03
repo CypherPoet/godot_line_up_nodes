@@ -1,0 +1,101 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr3sgphjfnidc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_1"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1"]
+top_radius = 0.4
+bottom_radius = 0.4
+height = 1.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1"]
+radius = 0.4
+height = 1.5
+
+[node name="Demo3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 8, 15)
+fov = 60.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.25, 0.433013, 0, 0.866025, 0.5, -0.5, -0.433013, 0.75, 0, 10, 0)
+shadow_enabled = true
+
+[node name="GridGroup" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Box1" type="MeshInstance3D" parent="GridGroup"]
+mesh = SubResource("BoxMesh_1")
+
+[node name="Box2" type="MeshInstance3D" parent="GridGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Box3" type="MeshInstance3D" parent="GridGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Box4" type="MeshInstance3D" parent="GridGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Box5" type="MeshInstance3D" parent="GridGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="VerticalGroup" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+
+[node name="Sphere1" type="MeshInstance3D" parent="VerticalGroup"]
+mesh = SubResource("SphereMesh_1")
+
+[node name="Sphere2" type="MeshInstance3D" parent="VerticalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 1.2, 0)
+mesh = SubResource("SphereMesh_1")
+
+[node name="Sphere3" type="MeshInstance3D" parent="VerticalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 2.8, 0)
+mesh = SubResource("SphereMesh_1")
+
+[node name="Sphere4" type="MeshInstance3D" parent="VerticalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 3.9, 0)
+mesh = SubResource("SphereMesh_1")
+
+[node name="DiagonalGroup" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 5)
+
+[node name="Cylinder1" type="MeshInstance3D" parent="DiagonalGroup"]
+mesh = SubResource("CylinderMesh_1")
+
+[node name="Cylinder2" type="MeshInstance3D" parent="DiagonalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 0.8, 0)
+mesh = SubResource("CylinderMesh_1")
+
+[node name="Cylinder3" type="MeshInstance3D" parent="DiagonalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0.3, 0)
+mesh = SubResource("CylinderMesh_1")
+
+[node name="Cylinder4" type="MeshInstance3D" parent="DiagonalGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 2.1, 0)
+mesh = SubResource("CylinderMesh_1")
+
+[node name="MixedGroup" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 3)
+
+[node name="Capsule1" type="MeshInstance3D" parent="MixedGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_1")
+
+[node name="Box6" type="MeshInstance3D" parent="MixedGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8, 0.2, 0)
+mesh = SubResource("BoxMesh_1")
+
+[node name="Sphere5" type="MeshInstance3D" parent="MixedGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 2.3, 0)
+mesh = SubResource("SphereMesh_1")
+
+[node name="Cylinder5" type="MeshInstance3D" parent="MixedGroup"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.9, 0)
+mesh = SubResource("CylinderMesh_1")
