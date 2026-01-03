@@ -52,9 +52,11 @@ func _build_ui() -> void:
 
 	# Add icon (using Godot's built-in editor icon)
 	var icon_texture := TextureRect.new()
-	icon_texture.texture = get_theme_icon("Node", "EditorIcons")
-	icon_texture.stretch_mode = TextureRect.STRETCH_KEEP_CENTERED
-	icon_texture.custom_minimum_size = Vector2(24, 24)
+	icon_texture.texture = preload("uid://bolowism4oeyq")
+	icon_texture.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	icon_texture.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	icon_texture.size = Vector2(36, 36)
+	icon_texture.custom_minimum_size = Vector2(36, 36)
 	header_container.add_child(icon_texture)
 
 	# Add title label
@@ -73,7 +75,7 @@ func _build_ui() -> void:
 	# Alignment Mode Section
 	var alignment_mode_label := Label.new()
 	alignment_mode_label.text = "Alignment Mode"
-	#alignment_mode_label.add_theme_font_size_override("font_size", 14)
+	alignment_mode_label.add_theme_font_size_override("font_size", 14)
 	add_child(alignment_mode_label)
 
 	# Horizontal mode
@@ -165,7 +167,7 @@ func _build_ui() -> void:
 	# Ordering Section
 	var ordering_label := Label.new()
 	ordering_label.text = "Ordering"
-	#ordering_label.add_theme_font_size_override("font_size", 14)
+	ordering_label.add_theme_font_size_override("font_size", 14)
 	add_child(ordering_label)
 
 	preserve_selection_order_checkbox = CheckBox.new()
