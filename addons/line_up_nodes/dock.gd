@@ -43,7 +43,7 @@ func _ready() -> void:
 func _build_ui() -> void:
 	# Set up the main container
 	size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	add_theme_constant_override("separation", 8)
+	add_theme_constant_override("separation", 12)
 
 	# Header with icon and title
 	var header_container := HBoxContainer.new()
@@ -68,9 +68,14 @@ func _build_ui() -> void:
 
 	add_child(header_container)
 
-	# Add separator
+	# Add separator with extra spacing
 	var separator1 := HSeparator.new()
 	add_child(separator1)
+
+	# Add spacing after separator
+	var spacer1 := Control.new()
+	spacer1.custom_minimum_size.y = 4
+	add_child(spacer1)
 
 	# Alignment Mode Section
 	var alignment_mode_label := Label.new()
@@ -80,6 +85,8 @@ func _build_ui() -> void:
 
 	# Horizontal mode
 	var horizontal_container := HBoxContainer.new()
+	horizontal_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	horizontal_radio_button = CheckBox.new()
 	horizontal_radio_button.text = "Horizontal"
 	horizontal_radio_button.button_pressed = true
@@ -88,6 +95,8 @@ func _build_ui() -> void:
 
 	var horizontal_distance_container := HBoxContainer.new()
 	horizontal_distance_container.add_theme_constant_override("separation", 8)
+	horizontal_distance_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	var horizontal_distance_label := Label.new()
 	horizontal_distance_label.text = "    Distance:"
 	horizontal_distance_label.custom_minimum_size.x = 100
@@ -97,18 +106,24 @@ func _build_ui() -> void:
 	horizontal_distance_input.value = 100
 	horizontal_distance_input.step = 1
 	horizontal_distance_input.custom_minimum_size.x = 150
+	horizontal_distance_input.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	horizontal_distance_container.add_child(horizontal_distance_label)
 	horizontal_distance_container.add_child(horizontal_distance_input)
 	add_child(horizontal_distance_container)
 
 	# Vertical mode
 	var vertical_container := HBoxContainer.new()
+	vertical_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	vertical_radio_button = CheckBox.new()
 	vertical_radio_button.text = "Vertical"
 	vertical_container.add_child(vertical_radio_button)
 	add_child(vertical_container)
 
 	var vertical_distance_container := HBoxContainer.new()
+	vertical_distance_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	vertical_distance_container.add_theme_constant_override("separation", 8)
 	var vertical_distance_label := Label.new()
 	vertical_distance_label.text = "    Distance:"
@@ -119,18 +134,24 @@ func _build_ui() -> void:
 	vertical_distance_input.value = 100
 	vertical_distance_input.step = 1
 	vertical_distance_input.custom_minimum_size.x = 150
+	vertical_distance_input.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	vertical_distance_container.add_child(vertical_distance_label)
 	vertical_distance_container.add_child(vertical_distance_input)
 	add_child(vertical_distance_container)
 
 	# Custom mode
 	var custom_container := HBoxContainer.new()
+	custom_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	custom_radio_button = CheckBox.new()
 	custom_radio_button.text = "Custom"
 	custom_container.add_child(custom_radio_button)
 	add_child(custom_container)
 
 	var custom_x_distance_container := HBoxContainer.new()
+	custom_x_distance_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	custom_x_distance_container.add_theme_constant_override("separation", 8)
 	var custom_x_distance_label := Label.new()
 	custom_x_distance_label.text = "    X Distance:"
@@ -141,11 +162,15 @@ func _build_ui() -> void:
 	custom_x_distance_input.value = 100
 	custom_x_distance_input.step = 1
 	custom_x_distance_input.custom_minimum_size.x = 150
+	custom_x_distance_input.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	custom_x_distance_container.add_child(custom_x_distance_label)
 	custom_x_distance_container.add_child(custom_x_distance_input)
 	add_child(custom_x_distance_container)
 
 	var custom_y_distance_container := HBoxContainer.new()
+	custom_y_distance_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	custom_y_distance_container.add_theme_constant_override("separation", 8)
 	var custom_y_distance_label := Label.new()
 	custom_y_distance_label.text = "    Y Distance:"
@@ -156,13 +181,25 @@ func _build_ui() -> void:
 	custom_y_distance_input.value = 100
 	custom_y_distance_input.step = 1
 	custom_y_distance_input.custom_minimum_size.x = 150
+	custom_y_distance_input.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	custom_y_distance_container.add_child(custom_y_distance_label)
 	custom_y_distance_container.add_child(custom_y_distance_input)
 	add_child(custom_y_distance_container)
 
+	# Add spacing before separator
+	var spacer2 := Control.new()
+	spacer2.custom_minimum_size.y = 4
+	add_child(spacer2)
+
 	# Add separator
 	var separator2 := HSeparator.new()
 	add_child(separator2)
+
+	# Add spacing after separator
+	var spacer3 := Control.new()
+	spacer3.custom_minimum_size.y = 4
+	add_child(spacer3)
 
 	# Ordering Section
 	var ordering_label := Label.new()
@@ -175,21 +212,36 @@ func _build_ui() -> void:
 	preserve_selection_order_checkbox.button_pressed = true
 	add_child(preserve_selection_order_checkbox)
 
+	# Add spacing before separator
+	var spacer4 := Control.new()
+	spacer4.custom_minimum_size.y = 4
+	add_child(spacer4)
+
 	# Add separator
 	var separator3 := HSeparator.new()
 	add_child(separator3)
 
+	# Add spacing after separator
+	var spacer5 := Control.new()
+	spacer5.custom_minimum_size.y = 4
+	add_child(spacer5)
+
 	# Action buttons
 	var button_container := HBoxContainer.new()
+	button_container.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	button_container.add_theme_constant_override("separation", 8)
 
 	align_button = Button.new()
 	align_button.text = "Align Nodes"
+	align_button.icon = get_theme_icon("ToolMove", "EditorIcons")
 	align_button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+
 	button_container.add_child(align_button)
 
 	close_button = Button.new()
 	close_button.text = "Close"
+	close_button.icon = get_theme_icon("Close", "EditorIcons")
 	button_container.add_child(close_button)
 
 	add_child(button_container)
