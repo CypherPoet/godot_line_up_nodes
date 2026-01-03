@@ -2,6 +2,8 @@
 
 A Godot 4.5 editor plugin that provides a convenient dock panel for aligning selected nodes into straight lines at fixed distances.
 
+![gif](docs/screenshots/demo_2d.gif)
+
 ## Features
 
 - **Three Alignment Modes**
@@ -165,6 +167,9 @@ All alignment operations are fully integrated with Godot's UndoRedo system:
 - The plugin might have been disabled
 - Re-enable it in Project Settings → Plugins
 - If the dock was closed via the Close button, disable and re-enable the plugin
+
+![gif](docs/screenshots/demo_3d_horizontal.gif)
+![gif](docs/screenshots/demo_3d_vertical.gif)
 
 ## License
 
