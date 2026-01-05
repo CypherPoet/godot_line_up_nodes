@@ -6,7 +6,7 @@ A Godot 4.5 editor plugin that provides a convenient dock panel for aligning sel
 
 ![gif](docs/screenshots/demo_2d.gif)
 
-## Features
+## ⭐ Features
 
 - **Three Alignment Modes**
   - **Horizontal**: Align nodes along the X axis with configurable spacing
@@ -26,7 +26,7 @@ A Godot 4.5 editor plugin that provides a convenient dock panel for aligning sel
   - Node2D nodes (uses `position` property)
   - Node3D nodes (uses `global_position` property)
 
-## Installation
+## 📦 Installation
 
 ### Via Asset Library (Recommended)
 
