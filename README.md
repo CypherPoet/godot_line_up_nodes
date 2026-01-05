@@ -1,4 +1,9 @@
-<img src="logo.svg" width="128" height="128">
+<img src="icon.svg" width="128" height="128">
+
+![GitHub Release](https://img.shields.io/github/v/release/CypherPoet/godot_line_up_nodes?label=Current%20Release)
+
+![Github Downloads](https://img.shields.io/github/downloads/CypherPoet/godot_line_up_nodes/total?logo=github&label=GitHub%20Downloads)
+
 
 # Line Up Nodes - Godot Editor Plugin
 

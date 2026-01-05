@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Line Up Nodes"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="uid://bolowism4oeyq"
+config/icon="uid://7wrn6n427qe"
 
 [editor_plugins]
 
